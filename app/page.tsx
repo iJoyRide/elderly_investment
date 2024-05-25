@@ -2,6 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import invoiceData from "@/components/utils/invoiceData"
+import ChatComponent from "@/components/ui/chat"
 import {
   Accordion,
   AccordionContent,
@@ -62,7 +63,7 @@ export default function Home() {
             ))}
           </Accordion>
           </TabsContent>
-          <TabsContent className="h-[144px]" value="magic_invest">Prompt engineering here</TabsContent>
+          <TabsContent className="" value="magic_invest"><ChatComponent /></TabsContent>
         </Tabs>
       </div>
       
