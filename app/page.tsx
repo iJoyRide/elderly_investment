@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { accordionItems } from '@/components/utils/accordionData';
 
 
 export default function Home() {
@@ -43,15 +44,23 @@ export default function Home() {
               </TableBody>
             </Table>
           </TabsContent>
-          <TabsContent className="h-[144px]" value="quick_invest">
-            <Accordion className=" p-5" type="single" collapsible>
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <TabsContent value="quick_invest">
+          <Accordion type="single" collapsible className="w-full pl-5 pr-5">
+            {accordionItems.map((item) => (
+              <AccordionItem key={item.id} value={item.id}>
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent className="">
+                  {item.option1}
+                </AccordionContent>
                 <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
+                  {item.option2}
+                </AccordionContent>
+                <AccordionContent>
+                  {item.option3}
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
+            ))}
+          </Accordion>
           </TabsContent>
           <TabsContent className="h-[144px]" value="magic_invest">Prompt engineering here</TabsContent>
         </Tabs>
