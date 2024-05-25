@@ -10,6 +10,15 @@ import {
 } from "@/components/ui/accordion"
 import { accordionItems } from '@/components/utils/accordionData';
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+
+
 
 export default function Home() {
   return (
@@ -50,13 +59,17 @@ export default function Home() {
               <AccordionItem key={item.id} value={item.id}>
                 <AccordionTrigger>{item.question}</AccordionTrigger>
                 <AccordionContent className="">
-                  {item.option1}
-                </AccordionContent>
-                <AccordionContent>
-                  {item.option2}
-                </AccordionContent>
-                <AccordionContent>
-                  {item.option3}
+                <Select>
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select an option" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="option1">{item.option1}</SelectItem>
+                    <SelectItem value="option2">{item.option2}</SelectItem>
+                    <SelectItem value="option3">{item.option3}</SelectItem>
+                    <SelectItem value="option4">{item.option4}</SelectItem>
+                  </SelectContent>
+                </Select>
                 </AccordionContent>
               </AccordionItem>
             ))}
