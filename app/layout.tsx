@@ -33,48 +33,6 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}>
-          <Menubar>
-            <MenubarMenu>
-              <MenubarTrigger>File</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem>
-                  New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-                </MenubarItem>
-                <MenubarItem>New Window</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Share</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Print</MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-              <MenubarTrigger>User</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem>
-                  New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-                </MenubarItem>
-                <MenubarItem>New Window</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Share</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Print</MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-              <MenubarTrigger>File</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem>
-                  New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-                </MenubarItem>
-                <MenubarItem>New Window</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Share</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Print</MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-          </Menubar>
-
           {children}
         </body>
     </html>
